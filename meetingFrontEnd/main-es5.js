@@ -391,7 +391,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n\n  <a class=\"navbar-brand\" href=\"/\">{{userName}}</a>\n\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n\n    <span class=\"navbar-toggler-icon\"></span>\n\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\n    <ul class=\"navbar-nav mr-auto\">\n\n      <li class=\"nav-item\">\n\n        <a class=\"nav-link\" (click)=\"goToUsersview()\">Go Back</a>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</nav>\n<br />\n<div class=\"row p-0 m-0\">\n\n  <div class=\"col-sm\"></div>\n\n  <div class=\"col-sm p-5\">\n\n    <h2 class=\"form-signin-heading\">Create Meeting for {{fullName}}</h2>\n\n    <br>\n\n    <span>Meeting Purpose: </span>\n\n    <label for=\"inputPurpose\" class=\"sr-only\">Meeting Purpose</label>\n\n    <input type=\"text\" id=\"inputPurpose\" class=\"form-control\" [(ngModel)]=\"purpose\" placeholder=\"Meeting Purpose\"\n      required autofocus>\n\n    <br>\n\n    <span>Meeting Place</span>\n\n    <label for=\"inputLastName\" class=\"sr-only\">Meeting Place</label>\n\n    <input type=\"text\" id=\"inputPlace\" class=\"form-control\" [(ngModel)]=\"place\" placeholder=\"Meeting Place\" required>\n\n    <br>\n    <span>Meeting Time: </span>\n\n    <label for=\"inputTime\" class=\"sr-only\">Meeting Time</label>\n\n    <input type=\"text\" id=\"inputTime\" class=\"form-control\" [(ngModel)]=\"time\" placeholder=\"Time(MM-DD-YYYY HH:MM:SS)\"\n      required>\n\n\n\n    <br>\n\n    <button class=\"btn btn-lg btn-primary btn-block\" type=\"button\" (click)=\"createMeetingFunction()\">Create\n      Meeting</button>\n\n  </div>\n\n  <div class=\"col-sm\"></div>\n\n</div>";
+    __webpack_exports__["default"] = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n\n  <a class=\"navbar-brand\" href=\"/\">{{userName}}</a>\n\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n\n    <span class=\"navbar-toggler-icon\"></span>\n\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\n    <ul class=\"navbar-nav mr-auto\">\n\n      <li class=\"nav-item\">\n\n        <a class=\"nav-link\" (click)=\"goToUsersview()\">Go Back</a>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</nav>\n<br />\n<div class=\"row p-0 m-0\">\n\n  <div class=\"col-sm\"></div>\n\n  <div class=\"col-sm p-5\">\n\n    <h2 class=\"form-signin-heading\">Create Meeting for {{fullName}}</h2>\n\n    <br>\n\n    <span>Meeting Purpose: </span>\n\n    <label for=\"inputPurpose\" class=\"sr-only\">Meeting Purpose</label>\n\n    <input type=\"text\" id=\"inputPurpose\" class=\"form-control\" [(ngModel)]=\"purpose\" placeholder=\"Meeting Purpose\"\n      required autofocus>\n\n    <br>\n\n    <span>Meeting Place</span>\n\n    <label for=\"inputLastName\" class=\"sr-only\">Meeting Place</label>\n\n    <input type=\"text\" id=\"inputPlace\" class=\"form-control\" [(ngModel)]=\"place\" placeholder=\"Meeting Place\" required>\n\n    <br>\n    <span>Meeting Time: </span>\n\n    <label for=\"inputTime\" class=\"sr-only\">Meeting Time</label>\n\n    <input type=\"text\" id=\"inputTime\" class=\"form-control\" [(ngModel)]=\"time\" placeholder=\"Time(MM-DD-YYYY HH:MM:SS AM/PM)\"\n      required>\n\n\n\n    <br>\n\n    <button class=\"btn btn-lg btn-primary btn-block\" type=\"button\" (click)=\"createMeetingFunction()\">Create\n      Meeting</button>\n\n  </div>\n\n  <div class=\"col-sm\"></div>\n\n</div>";
     /***/
   },
 
@@ -611,7 +611,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n\n  <a class=\"navbar-brand\" href=\"/\">Meeting Scheduler</a>\n\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n\n    <span class=\"navbar-toggler-icon\"></span>\n\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\n    <ul class=\"navbar-nav mr-auto\">\n\n      <li class=\"nav-item\">\n\n        <a class=\"nav-link\" (click)=\"goToLogin()\">Log-In</a>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</nav>\n\n<div class=\"row p-0 m-0\">\n\n  <div class=\"col-sm\"></div>\n\n  <div class=\"col-sm p-5\">\n\n    <h2 class=\"form-signin-heading\">Sign Up Here...</h2>\n\n    <br>\n\n    <span>First Name: </span>\n\n    <label for=\"inputFirstName\" class=\"sr-only\">First Name</label>\n\n    <input type=\"text\" id=\"inputFirstName\" class=\"form-control\" [(ngModel)]=\"firstName\" placeholder=\"FirstName\" required\n      autofocus>\n\n    <br>\n\n    <span>Last Name: </span>\n\n    <label for=\"inputLastName\" class=\"sr-only\">Last Name</label>\n\n    <input type=\"text\" id=\"inputLastName\" class=\"form-control\" [(ngModel)]=\"lastName\" placeholder=\"LastName\" required>\n\n    <br>\n    <span>Country Code: </span>\n\n    <label for=\"inputCountryCode\" class=\"sr-only\">Country Code</label>\n\n    <input type=\"number\" id=\"inputMobile\" class=\"form-control\" [(ngModel)]=\"countryCode\" placeholder=\"Country Code\"\n      required>\n\n    <br>\n\n    <span>Mobile: </span>\n\n    <label for=\"inputMobile\" class=\"sr-only\">Mobile</label>\n\n    <input type=\"number\" id=\"inputMobile\" class=\"form-control\" [(ngModel)]=\"mobile\" placeholder=\"Mobile\" required>\n\n    <br>\n\n    <span>Email: </span>\n\n    <label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n\n    <input type=\"email\" id=\"inputEmail\" class=\"form-control\" [(ngModel)]=\"email\" placeholder=\"Email address\" required>\n\n    <br>\n\n    <span>Password: </span>\n\n    <label for=\"inputPassword\" class=\"sr-only\">Password</label>\n\n    <input type=\"password\" id=\"inputPassword\" class=\"form-control\" [(ngModel)]=\"password\" placeholder=\"Password\"\n      required>\n\n    <br>\n    <span>Confirm Password: </span>\n\n    <label for=\"inputPassword\" class=\"sr-only\">Confirm Password</label>\n\n    <input type=\"password\" id=\"inputPassword\" class=\"form-control\" [(ngModel)]=\"confPassword\" placeholder=\"Password\"\n      required>\n\n    <br>\n\n\n    <span>Admin Key: </span>\n\n    <label for=\"inputAdminKey\" class=\"sr-only\">Admin Key</label>\n\n    <input type=\"sdminKey\" id=\"inputAdminKey\" class=\"form-control\" [(ngModel)]=\"adminKey\" placeholder=\"AdminKey\">\n\n    <br>\n\n\n    <button class=\"btn btn-dark btn-block\" type=\"button\" (click)=\"signupFunction()\">Sign Up</button>\n\n  </div>\n\n  <div class=\"col-sm\"></div>\n\n</div>";
+    __webpack_exports__["default"] = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n\n  <a class=\"navbar-brand\" href=\"/\">Meeting Scheduler</a>\n\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n\n    <span class=\"navbar-toggler-icon\"></span>\n\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\n    <ul class=\"navbar-nav mr-auto\">\n\n      <li class=\"nav-item\">\n\n        <a class=\"nav-link\" (click)=\"goToLogin()\">Log-In</a>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</nav>\n\n<div class=\"row p-0 m-0\">\n\n  <div class=\"col-sm\"></div>\n\n  <div class=\"col-sm p-5\">\n\n    <h2 class=\"form-signin-heading\">Sign Up Here...</h2>\n\n    <br>\n\n    <span>First Name: </span>\n\n    <label for=\"inputFirstName\" class=\"sr-only\">First Name</label>\n\n    <input type=\"text\" id=\"inputFirstName\" class=\"form-control\" [(ngModel)]=\"firstName\" placeholder=\"FirstName\" required\n      autofocus>\n\n    <br>\n\n    <span>Last Name: </span>\n\n    <label for=\"inputLastName\" class=\"sr-only\">Last Name</label>\n\n    <input type=\"text\" id=\"inputLastName\" class=\"form-control\" [(ngModel)]=\"lastName\" placeholder=\"LastName\" required>\n\n    <br>\n    <span>Country Code: </span>\n\n    <label for=\"inputCountryCode\" class=\"sr-only\">Country Code</label>\n\n    <input type=\"number\" id=\"inputMobile\" class=\"form-control\" [(ngModel)]=\"countryCode\" placeholder=\"Country Code\"\n      required>\n\n    <br>\n\n    <span>Mobile: </span>\n\n    <label for=\"inputMobile\" class=\"sr-only\">Mobile</label>\n\n    <input type=\"number\" id=\"inputMobile\" class=\"form-control\" [(ngModel)]=\"mobile\" placeholder=\"Mobile\" required>\n\n    <br>\n\n    <span>Email: </span>\n\n    <label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n\n    <input type=\"email\" id=\"inputEmail\" class=\"form-control\" [(ngModel)]=\"email\" placeholder=\"Email address\" required>\n\n    <br>\n\n    <span>Password: </span>\n\n    <label for=\"inputPassword\" class=\"sr-only\">Password</label>\n\n    <input type=\"password\" id=\"inputPassword\" class=\"form-control\" [(ngModel)]=\"password\" placeholder=\"Password\"\n      required>\n\n    <br>\n    <span>Confirm Password: </span>\n\n    <label for=\"inputPassword\" class=\"sr-only\">Confirm Password</label>\n\n    <input type=\"password\" id=\"inputPassword\" class=\"form-control\" [(ngModel)]=\"confPassword\" placeholder=\"Password\"\n      required>\n\n    <br>\n\n\n    <span>Admin Key: </span>\n\n    <label for=\"inputAdminKey\" class=\"sr-only\">Admin Key</label>\n\n    <input type=\"sdminKey\" id=\"inputAdminKey\" class=\"form-control\" [(ngModel)]=\"adminKey\" placeholder=\"AdminKey Is GisG\">\n\n    <br>\n\n\n    <button class=\"btn btn-dark btn-block\" type=\"button\" (click)=\"signupFunction()\">Sign Up</button>\n\n  </div>\n\n  <div class=\"col-sm\"></div>\n\n</div>";
     /***/
   },
 
@@ -1550,14 +1550,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AppService =
     /*#__PURE__*/
     function () {
-      // private url = 'http://localhost:3000';
       function AppService(http) {
         var _this = this;
 
         _classCallCheck(this, AppService);
 
-        this.http = http;
-        this.url = 'http://api.techway.xyz';
+        this.http = http; // private url =  'http://api.techway.xyz';
+
+        this.url = 'http://localhost:3000';
 
         this.getUserInfoFromLocalstorage = function () {
           return JSON.parse(localStorage.getItem('userInfo'));
@@ -2073,8 +2073,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               _this4.socket.createMeetingAlert(data);
 
-              _this4.socket.alert(data);
-
               setTimeout(function () {
                 _this4.router.navigate(["/users/view/".concat(_this4.userId)], {
                   queryParams: {
@@ -2296,8 +2294,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this6.toastr.success("Meeting Edited successfully");
 
               _this6.socket.editMeetingAlert(data);
-
-              _this6.socket.alert(data);
 
               setTimeout(function () {
                 _this6.router.navigate(["/users/view/".concat(_this6.userId)], {
@@ -2789,8 +2785,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               _this8.socket.deleteMeetingAlert(data);
 
-              _this8.socket.alert(data);
-
               setTimeout(function () {
                 _this8.router.navigate(["users/view/".concat(_this8.userId)], {
                   queryParams: {
@@ -3089,7 +3083,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.socket.directAlert().subscribe(function (message) {
             setTimeout(function () {
               _this11.toastr.show(message.msg);
-            }, 2000);
+            });
+
+            _this11.getMeetings(_this11.userId, _this11.skipInit);
           });
 
           if (ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverIsAdmin') !== "true") {
@@ -3491,8 +3487,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, SocketService);
 
-        this.http = http;
-        this.url = 'http://api.techway.xyz';
+        this.http = http; // private url = 'http://api.techway.xyz';
+
+        this.url = 'http://localhost:3000';
 
         this.verifyUser = function () {
           return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].create(function (observer) {
