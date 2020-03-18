@@ -925,10 +925,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AppService = class AppService {
+    //private url = 'http://localhost:3000';
     constructor(http) {
         this.http = http;
-        // private url =  'http://api.techway.xyz';
-        this.url = 'http://localhost:3000';
+        this.url = 'http://api.techway.xyz';
         this.getUserInfoFromLocalstorage = () => {
             return JSON.parse(localStorage.getItem('userInfo'));
         }; // end getUserInfoFromLocalstorage
@@ -2093,8 +2093,7 @@ __webpack_require__.r(__webpack_exports__);
 let SocketService = class SocketService {
     constructor(http) {
         this.http = http;
-        // private url = 'http://api.techway.xyz';
-        this.url = 'http://localhost:3000';
+        this.url = 'http://api.techway.xyz';
         this.verifyUser = () => {
             return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].create((observer) => {
                 this.socket.on('register-users', () => {

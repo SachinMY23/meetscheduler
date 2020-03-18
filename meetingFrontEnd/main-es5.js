@@ -1550,14 +1550,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AppService =
     /*#__PURE__*/
     function () {
+      //private url = 'http://localhost:3000';
       function AppService(http) {
         var _this = this;
 
         _classCallCheck(this, AppService);
 
-        this.http = http; // private url =  'http://api.techway.xyz';
-
-        this.url = 'http://localhost:3000';
+        this.http = http;
+        this.url = 'http://api.techway.xyz';
 
         this.getUserInfoFromLocalstorage = function () {
           return JSON.parse(localStorage.getItem('userInfo'));
@@ -3487,9 +3487,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, SocketService);
 
-        this.http = http; // private url = 'http://api.techway.xyz';
-
-        this.url = 'http://localhost:3000';
+        this.http = http;
+        this.url = 'http://api.techway.xyz';
 
         this.verifyUser = function () {
           return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].create(function (observer) {
