@@ -1118,7 +1118,7 @@ let AdminviewComponent = class AdminviewComponent {
         };
         this.loadMoreUsers = () => {
             this.count += 1;
-            let skip = 3 * this.count;
+            let skip = 15 * this.count;
             console.log(skip);
             console.log(this.allUsers);
             this.appService.getAllUsers(skip).subscribe((apiResponse) => {
@@ -1398,7 +1398,7 @@ let EditComponent = class EditComponent {
                 adminNo: ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverNo'),
                 email: this.email,
                 oldMeetingTime: this.oldTime,
-                msg: `Your Meeting that was on ${this.oldTime} changed to ${moment__WEBPACK_IMPORTED_MODULE_8__(this.time).format('LLLL')}`
+                msg: `Your Meeting that is on ${this.oldTime} changed to ${moment__WEBPACK_IMPORTED_MODULE_8__(this.time).format('LLLL')}`
             };
             this.appService.editMeeting(currentMeeting).subscribe((apiResponse) => {
                 if (apiResponse.status == 200) {
@@ -1832,7 +1832,7 @@ let UserviewComponent = class UserviewComponent {
         };
         this.loadMoreMeetings = () => {
             this.count += 1;
-            let skip = 3 * this.count;
+            let skip = 15 * this.count;
             this.appService.getAllMeetings(this.userId, skip).subscribe((apiResponse) => {
                 console.log(apiResponse);
                 if (apiResponse.status == 200) {
@@ -1876,7 +1876,7 @@ let UserviewComponent = class UserviewComponent {
             this.userIsAdmin = true;
         }
         this.socket.directAlert().subscribe((message) => {
-            setTimeout(() => { this.toastr.show(message.msg); });
+            this.toastr.show(message.msg);
             this.getMeetings(this.userId, this.skipInit);
         });
         if (ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverIsAdmin') !== "true") {
@@ -2403,7 +2403,7 @@ let EditprofileComponent = class EditprofileComponent {
                                 }, 2000);
                             }
                             else {
-                                this.goToAdminview();
+                                this.goToUserview();
                             }
                         }
                         else {

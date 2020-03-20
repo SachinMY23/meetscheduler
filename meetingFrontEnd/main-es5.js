@@ -1825,7 +1825,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.loadMoreUsers = function () {
           _this2.count += 1;
-          var skip = 3 * _this2.count;
+          var skip = 15 * _this2.count;
           console.log(skip);
           console.log(_this2.allUsers);
 
@@ -2286,7 +2286,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             adminNo: ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverNo'),
             email: _this6.email,
             oldMeetingTime: _this6.oldTime,
-            msg: "Your Meeting that was on ".concat(_this6.oldTime, " changed to ").concat(moment__WEBPACK_IMPORTED_MODULE_8__(_this6.time).format('LLLL'))
+            msg: "Your Meeting that is on ".concat(_this6.oldTime, " changed to ").concat(moment__WEBPACK_IMPORTED_MODULE_8__(_this6.time).format('LLLL'))
           };
 
           _this6.appService.editMeeting(currentMeeting).subscribe(function (apiResponse) {
@@ -3023,7 +3023,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.loadMoreMeetings = function () {
           _this10.count += 1;
-          var skip = 3 * _this10.count;
+          var skip = 15 * _this10.count;
 
           _this10.appService.getAllMeetings(_this10.userId, skip).subscribe(function (apiResponse) {
             console.log(apiResponse);
@@ -3081,9 +3081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.socket.directAlert().subscribe(function (message) {
-            setTimeout(function () {
-              _this11.toastr.show(message.msg);
-            });
+            _this11.toastr.show(message.msg);
 
             _this11.getMeetings(_this11.userId, _this11.skipInit);
           });
@@ -3941,7 +3939,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       _this16.goToAdminview();
                     }, 2000);
                   } else {
-                    _this16.goToAdminview();
+                    _this16.goToUserview();
                   }
                 } else {
                   _this16.toastr.error(apiResponse.message);
