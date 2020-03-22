@@ -1249,8 +1249,9 @@ let CreateComponent = class CreateComponent {
         this.appService = appService;
         this.socket = socket;
         this._route = _route;
+        this.adminName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName');
         this.userId = this._route.snapshot.params.userId;
-        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('fullName');
+        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName');
         this.goToUsersview = () => {
             this.router.navigate([`users/view/${this.userId}`], { queryParams: { name: this.fullName } });
         };
@@ -1273,6 +1274,7 @@ let CreateComponent = class CreateComponent {
             this.appService.createMeeting(meeting).subscribe((apiResponse) => {
                 if (apiResponse.status == 200) {
                     this.toastr.success("Meeting Created Successfully");
+                    console.log(data);
                     this.socket.createMeetingAlert(data);
                     setTimeout(() => {
                         this.router.navigate([`/users/view/${this.userId}`], { queryParams: { name: this.fullName } });
@@ -1372,7 +1374,7 @@ let EditComponent = class EditComponent {
         this.socket = socket;
         this.location = location;
         this.meetingId = this._route.snapshot.params.meetingId;
-        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('fullName');
+        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName');
         this.getUser = (userId) => {
             this.appService.getSingleUser(userId).subscribe((apiResponse) => {
                 console.log(apiResponse);
@@ -1388,7 +1390,8 @@ let EditComponent = class EditComponent {
                 meetingPurpose: this.purpose,
                 meetingTime: moment__WEBPACK_IMPORTED_MODULE_8__(this.time).format('LLLL'),
                 meetingPlace: this.place,
-                meetingId: this.meetingId
+                meetingId: this.meetingId,
+                adminName: ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName')
             };
             let data = {
                 receiverId: this.userId,

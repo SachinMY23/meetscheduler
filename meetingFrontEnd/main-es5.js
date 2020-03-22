@@ -2039,8 +2039,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.appService = appService;
         this.socket = socket;
         this._route = _route;
+        this.adminName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName');
         this.userId = this._route.snapshot.params.userId;
-        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('fullName');
+        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName');
 
         this.goToUsersview = function () {
           _this4.router.navigate(["users/view/".concat(_this4.userId)], {
@@ -2070,6 +2071,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _this4.appService.createMeeting(meeting).subscribe(function (apiResponse) {
             if (apiResponse.status == 200) {
               _this4.toastr.success("Meeting Created Successfully");
+
+              console.log(data);
 
               _this4.socket.createMeetingAlert(data);
 
@@ -2257,7 +2260,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.socket = socket;
         this.location = location;
         this.meetingId = this._route.snapshot.params.meetingId;
-        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('fullName');
+        this.userName = ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName');
 
         this.getUser = function (userId) {
           _this6.appService.getSingleUser(userId).subscribe(function (apiResponse) {
@@ -2276,7 +2279,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             meetingPurpose: _this6.purpose,
             meetingTime: moment__WEBPACK_IMPORTED_MODULE_8__(_this6.time).format('LLLL'),
             meetingPlace: _this6.place,
-            meetingId: _this6.meetingId
+            meetingId: _this6.meetingId,
+            adminName: ng2_cookies_ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["Cookie"].get('receiverName')
           };
           var data = {
             receiverId: _this6.userId,
